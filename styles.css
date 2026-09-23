@@ -1,0 +1,129 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100vw;
+    display:flex;
+    justify-content:center;
+    background: url(fondo.jpg) center center;
+    background-size:cover;
+    
+}
+H1{color: #cf3c3c}
+
+/* Estilo del botón */
+.boton-redireccion {
+  /* 1. Forma y estructura */
+  display: inline-block;        /* Permite darle ancho, alto y márgenes */
+  padding: 8px 16px;           /* Espacio interno: arriba/abajo e izquierda/derecha */
+  
+  /* 2. Colores y fondo */
+  background-color: #f2c17c;    /* Color de fondo (verde) */
+  color: white;                 /* Color del texto */
+  
+  /* 3. Bordes y esquinas */
+  border: 2px solid #965b08;    /* Borde: grosor, estilo y color */
+  border-radius: 8px;           /* Redondea las esquinas del rectángulo */
+  
+  /* 4. Texto y tipografía */
+  text-decoration: none;        /* Quita el subrayado azul por defecto */
+  font-family: Arial, sans-serif;
+  font-weight: bold;            /* Texto en negrita */
+  font-size: 16px;
+  
+  /* 5. Efectos de interacción */
+  cursor: pointer;              /* Muestra la manita al pasar el ratón */
+  transition: all 0.3s ease;    /* Suaviza los cambios de color al pasar el ratón */
+}
+a:hover {color:#965b08;} /* color par aplicar al enlace después de que se visita*/
+/*  
+    body.pagina-reseñas{
+        background-image: none;
+        background-color:#f0d0a3;}
+    .tarjeta{
+     1. Forma y estructura 
+    display: inline-block;         Permite darle ancho, alto y márgenes 
+    padding: 6px 10px;            Espacio interno: arriba/abajo e izquierda/derecha 
+    
+     2. Colores y fondo 
+    background-color: #f2c17c;     Color de fondo (verde) 
+    color: white;                  Color del texto 
+    
+     3. Bordes y esquinas 
+    border: 2px solid #965b08;     Borde: grosor, estilo y color 
+    border-radius: 8px;            Redondea las esquinas del rectángulo 
+    
+     4. Texto y tipografía 
+    text-decoration: none;         Quita el subrayado azul por defecto 
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    }
+*/
+body.pagina-reseñas {
+    display: grid;
+    /* Reemplaza auto-fit por un número fijo de columnas */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 10px auto;
+    padding: 20px;
+}
+/* 2. Estilo individual de la Tarjeta */
+.tarjeta {
+    background-color: rgb(215, 200, 193);   /* Fondo blanco para resaltar sobre el fondo azul */
+    border-radius: 12px;       /* Esquinas redondeadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para dar elevación */
+    overflow: auto;          /* Mantiene la imagen dentro de los bordes redondeados */
+    display: flex;
+    flex-direction: column;    /* Ordena imagen arriba y texto abajo internamente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+}
+.tarjeta:hover {
+    background-color: rgb(195, 180, 173); /* El nuevo color de fondo al pasar el ratón */
+    cursor: pointer;                      /* Cambia el cursor a una mano */
+}
+.estrellas {
+    color: #f59e0b;                        /* Color dorado/amarillo para las estrellas */
+    font-size: 1.1rem;
+}
+
+.fecha {
+    color: #6b7280;                        /* Color gris discreto */
+}
+.tarjeta-cita {
+    margin: 10px 0 0 0;
+    padding-left: 10px;
+    border-left: 3px solid #d1d5db;        /* Línea lateral para destacar la frase */
+    font-style: italic;
+    color: #4b5563;
+}
+.tarjeta-texto {
+    text-align: justify;
+
+}
+
+.boton-inicio {
+    position: fixed;            /* Lo fija en la pantalla aunque hagas scroll */
+    bottom: 20px;               /* Distancia desde la parte inferior */
+    right: 20px;                /* Distancia desde la derecha */
+    width: 50px;
+    height: 50px;
+    background-color: #1a1a1a;  /* Color de fondo del botón */
+    color: #ffffff;             /* Color del icono */
+    border-radius: 50%;         /* Lo hace completamente redondo */
+    display: flex;
+    justify-content: center;    /* Centra el icono horizontalmente */
+    align-items: center;        /* Centra el icono verticalmente */
+    font-size: 24px;            /* Tamaño de la casita */
+    text-decoration: none;      /* Quita el subrayado del enlace */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    z-index: 1000;              /* Asegura que quede por encima de otros elementos */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Efecto al pasar el ratón por encima */
+.boton-inicio:hover {
+    background-color: #333333;
+    transform: scale(1.1);      /* Se agranda ligeramente */
+}
