@@ -7,6 +7,20 @@
 </head>
 <body class="pagina-reseñas">
     <div class="tarjeta">
+        <img src="rental_family.png" alt="Rental family" class="tarjeta-imagen">
+        <h2>Rental Family</h2>
+        <p><span class="estrellas">★★★★★</span>
+            <span class="fecha">23/09/2026</span>
+            <br class="tarjeta-texto"> Reseña
+            
+            <blockquote class="tarjeta-cita">
+            "cita"
+        </blockquote>
+        <button class="btn-like" onclick="darLike(this)">
+            ❤️ <span class="contador-likes">0</span>
+        </button></p>
+    </div>
+    <div class="tarjeta">
         <img src="oasis.jpg" alt="Descripción de la foto" class="tarjeta-imagen">
         <h2>Oasis: Don´t Look Back in Anger</h2>
         <p>
@@ -17,6 +31,9 @@
             <blockquote class="tarjeta-cita">
             "If you're gonna be a cunt, at least be a funny one."
         </blockquote>
+        <button class="btn-like" onclick="darLike(this)">
+            ❤️ <span class="contador-likes">0</span>
+        </button>
         </p>
     </div>
     <div class="tarjeta">
@@ -31,13 +48,32 @@
             <blockquote class="tarjeta-cita">
             "What's happened, happened."
         </blockquote>
+        <button class="btn-like" onclick="darLike(this)">
+            ❤️ <span class="contador-likes">0</span>
+        </button>
         </p>
     </div>
-    <div class="tarjeta">
-        <h2>Pelicula X3</h2>
-        <p>Esta pelicula ...</p>
-    </div>
+    
 <a href="index.html" class="boton-inicio" title="Volver a la página principal">
     🏠
 </a>
+<script>
+function darLike(boton) {
+    // Busca el elemento del número dentro del botón que fue presionado
+    const contador = boton.querySelector('.contador-likes');
+    let likesActuales = parseInt(contador.textContent);
+
+    // Comprueba si el botón ya tiene la clase 'activo' (ya le dimos like)
+    if (boton.classList.contains('activo')) {
+        likesActuales--;               // Quita un like
+        boton.classList.remove('activo');
+    } else {
+        likesActuales++;               // Agrega un like
+        boton.classList.add('activo');
+    }
+
+    // Actualiza el número visible
+    contador.textContent = likesActuales;
+}
+</script>
 </body>
