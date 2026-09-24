@@ -3,6 +3,7 @@ body{
     height: 100%;
     width: 100vw;
     display:flex;
+    flex-direction: column;
     justify-content:center;
     background: url(fondo.jpg) center center;
     background-size:cover;
@@ -68,6 +69,7 @@ body.pagina-reseñas {
     margin: 10px auto;
     padding: 20px;
 }
+
 /* 2. Estilo individual de la Tarjeta */
 .tarjeta {
     background-color: rgb(215, 200, 193);   /* Fondo blanco para resaltar sobre el fondo azul */
@@ -126,4 +128,35 @@ body.pagina-reseñas {
 .boton-inicio:hover {
     background-color: #333333;
     transform: scale(1.1);      /* Se agranda ligeramente */
+}
+.btn-like {
+    background-color: #fce7f3;
+    color: #db2777;
+    border: 1px solid #fbcfe8;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-like:hover {
+    background-color: #fbcfe8;
+    transform: scale(1.05);
+}
+
+/* Estilo cuando ya se ha dado like */
+.btn-like.activo {
+    background-color: #ec4899;
+    color: white;
+    border-color: #ec4899;
+}
+.linea-puntos {
+    border: none;                 /* Quitamos el borde sólido por defecto */
+    border-top: 2px dotted #333;  /* Creamos la línea de puntitos arriba */
+    margin: 2em 0;                /* Espacio arriba y abajo de la línea */
 }
