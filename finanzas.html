@@ -7,8 +7,44 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tracker.css">
     <title>Tracker de gastos</title>
+    <h1 class="titulo_dinero">Dinerito</h1>
 </head>
 <body>
-    <a href="index.html" class="boton-inicio" title="Volver al inicio">🏠</a>
+    <a href="index.html" class="boton-inicio" title="Volver al inicio" onclick="
+        alert('Volviendo a la pagina de inicio')
+        ">🏠</a>
+    <section class="seccion-formulario">
+            <h2>Añadir Nuevo Gasto</h2>
+            <form id="form-gasto">
+                <div class="grupo-input">
+                    <label for="concepto">Concepto</label>
+                    <input type="text" id="concepto" placeholder="Ej. Compra supermercado" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="cantidad">Cantidad (€)</label>
+                    <input type="number" id="cantidad" step="0.01" placeholder="0.00" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="Comida">Comida / Supermercado</option>
+                        <option value="Transporte">Transporte</option>
+                        <option value="Ocio">Ocio y Entretenimiento</option>
+                        <option value="Hogar">Hogar y Servicios</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" required>
+                </div>
+
+                <button type="submit" class="btn-guardar">Agregar Gasto</button>
+            </form>
+        </section>
 </body>
 </html>
