@@ -69,37 +69,42 @@ a:hover {color:#965b08;} /* color par aplicar al enlace después de que se visit
     display: block;
     width: fit-content;
     
-    /* 2. Centra el bloque en el espacio disponible */
-    margin-right: 20px; 
+    /* 2. REEMPLAZO: 'auto' a la izquierda y derecha calcula el centro exacto */
+    margin: 0 auto 20px auto; 
 
-    /* 3. Transición suave con transform en lugar de font-size */
+    /* 3. Transición suave con transform */
     transition: transform 0.15s ease;
 }
 
 .mes:hover {
-    /* 4. Agranda el texto sin afectar la caja invisible */
+    /* 4. Agranda el texto sin desajustar el centro */
     transform: scale(1.2);
     cursor: pointer;
 }
-body.pagina-reseñas {
+.pagina-reseñas {
     display: grid;
-    /* Reemplaza auto-fit por un número fijo de columnas */
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
     gap: 20px;
     width: 100%;
     max-width: 1100px;
-    margin: 10px auto;
+    margin: 0 auto; /* Centra el bloque entero de tarjetas */
     padding: 20px;
+}
+.tarjeta-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 /* 2. Estilo individual de la Tarjeta */
 .tarjeta {
-    background-color: rgb(215, 200, 193);   /* Fondo blanco para resaltar sobre el fondo azul */
-    border-radius: 12px;       /* Esquinas redondeadas */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para dar elevación */
-    overflow: auto;          /* Mantiene la imagen dentro de los bordes redondeados */
+    background-color: rgb(215, 200, 193);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Cambiado de 'auto' a 'hidden' para no crear barras molestas */
     display: flex;
-    flex-direction: column;    /* Ordena imagen arriba y texto abajo internamente */
+    flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 20px;
 }
