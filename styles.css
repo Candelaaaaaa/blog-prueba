@@ -59,6 +59,28 @@ a:hover {color:#965b08;} /* color par aplicar al enlace después de que se visit
     font-size: 16px;
     }
 */
+.mes {
+    color: black;
+    font-family: 'Great Vibes', cursive, Verdana, sans-serif;
+    font-size: x-large;
+    text-decoration: underline;
+
+    /* 1. Ajusta la caja exactamente al tamaño de la palabra */
+    display: block;
+    width: fit-content;
+    
+    /* 2. Centra el bloque en el espacio disponible */
+    margin: 0 auto 20px auto; 
+
+    /* 3. Transición suave con transform en lugar de font-size */
+    transition: transform 0.15s ease;
+}
+
+.mes:hover {
+    /* 4. Agranda el texto sin afectar la caja invisible */
+    transform: scale(1.2);
+    cursor: pointer;
+}
 body.pagina-reseñas {
     display: grid;
     /* Reemplaza auto-fit por un número fijo de columnas */

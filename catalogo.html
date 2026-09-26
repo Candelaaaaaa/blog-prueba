@@ -3,24 +3,47 @@
     <meta name="robots" content="noindex, nofollow">
     <title>Mis reseñas</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Sacramento&display=swap" rel="stylesheet">
     <!--Esto es un comentario, rel viene de relacion, aclara al navegador que va a ser un archivo de estilos -->
 </head>
 <body class="pagina-reseñas">
-    <div class="tarjeta">
+    <h1 class="mes">Septiembre</h1>
+    <div class="tarjeta" id="reseña-nimona">
+        <img src="nimona.jpg" alt="Descripción de la foto" class="tarjeta-imagen">
+        <h2>Nimona</h2>
+        <p>
+            <span class="estrellas">★★★⯨</span>
+            <span class="fecha">25/09/2026</span>
+            <br class="tarjeta-texto">
+             Qué animación tan más bonita. Qué recuerdos de cuando me leí
+            el libro. 
+            <blockquote class="tarjeta-cita">
+            "Something, something, something... We win"
+        </blockquote>
+        <button class="btn-like" onclick="darLike(this)">
+            ❤️ <span class="contador-likes">0</span>
+        </button>
+        </p>
+    </div>
+    <div class="tarjeta" id="reseña-rental_family">
         <img src="rental_family.png" alt="Rental family" class="tarjeta-imagen">
         <h2>Rental Family</h2>
         <p><span class="estrellas">★★★★★</span>
             <span class="fecha">23/09/2026</span>
-            <br class="tarjeta-texto"> Reseña
+            <br class="tarjeta-texto">  Qué trama más bonita y más triste a la vez. 
+            Qué curiosa la fina línea entre lo que sentimos y lo que fingimos y que manera más original de abordar el tema.
+            Al final, los seres humanos somos vínculos.
             
             <blockquote class="tarjeta-cita">
-            "cita"
+            "Sometimes all we need is someone to look us in the eye and remind us we exist."
         </blockquote>
         <button class="btn-like" onclick="darLike(this)">
             ❤️ <span class="contador-likes">0</span>
         </button></p>
     </div>
-    <div class="tarjeta">
+    <div class="tarjeta" id="reseña-oasis">
         <img src="oasis.jpg" alt="Descripción de la foto" class="tarjeta-imagen">
         <h2>Oasis: Don´t Look Back in Anger</h2>
         <p>
@@ -36,7 +59,7 @@
         </button>
         </p>
     </div>
-    <div class="tarjeta">
+    <div class="tarjeta" id="reseña-tenet">
         <img src="tenet.jpg" alt="Descripción de la foto" class="tarjeta-imagen">
         <h2>Tenet</h2>
         <p>
@@ -53,6 +76,7 @@
         </button>
         </p>
     </div>
+    
     
 <a href="index.html" class="boton-inicio" title="Volver a la página principal">
     🏠
