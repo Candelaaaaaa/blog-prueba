@@ -70,7 +70,7 @@ a:hover {color:#965b08;} /* color par aplicar al enlace después de que se visit
     width: fit-content;
     
     /* 2. Centra el bloque en el espacio disponible */
-    margin: 0 auto 20px auto; 
+    margin-right: 20px; 
 
     /* 3. Transición suave con transform en lugar de font-size */
     transition: transform 0.15s ease;
