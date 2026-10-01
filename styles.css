@@ -59,58 +59,70 @@ a:hover {color:#965b08;} /* color par aplicar al enlace después de que se visit
     font-size: 16px;
     }
 */
+/* Reseteo para quitar márgenes extraños */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 20px;
+    background-color: #e5d8cc; /* Tu color de fondo */
+}
+
+/* Título de Septiembre centrado arriba */
 .mes {
     color: black;
     font-family: 'Great Vibes', cursive, Verdana, sans-serif;
-    font-size: x-large;
+    font-size: 2.5rem;
     text-decoration: underline;
-
-    /* 1. Ajusta la caja exactamente al tamaño de la palabra */
     display: block;
     width: fit-content;
-    
-    /* 2. REEMPLAZO: 'auto' a la izquierda y derecha calcula el centro exacto */
-    margin: 0 auto 20px auto; 
-
-    /* 3. Transición suave con transform */
+    margin: 10px auto 30px auto; /* 30px de margen abajo para separarlo de las tarjetas */
     transition: transform 0.15s ease;
 }
 
 .mes:hover {
-    /* 4. Agranda el texto sin desajustar el centro */
     transform: scale(1.2);
     cursor: pointer;
 }
+
+/* Rejilla de 2 columnas para LAS TARJETAS */
 .pagina-reseñas {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+    grid-template-columns: repeat(2, 1fr); /* Garantiza 2 columnas iguales */
     gap: 20px;
     width: 100%;
     max-width: 1100px;
-    margin: 0 auto; /* Centra el bloque entero de tarjetas */
-    padding: 20px;
-}
-.tarjeta-imagen {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
+    margin: 0 auto; /* Centra toda la parrilla */
+    padding: 0 20px 40px 20px;
 }
 
-/* 2. Estilo individual de la Tarjeta */
+/* ¡OBLIGATORIO! Esto evita que la imagen de la tarjeta nueva rompa la columna */
+.tarjeta-imagen {
+    width: 100%;
+    height: 220px; /* Ancho completo y altura fija bonita */
+    object-fit: cover; /* Ajusta la foto sin deformarla */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Estilo individual de la Tarjeta */
 .tarjeta {
     background-color: rgb(215, 200, 193);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Cambiado de 'auto' a 'hidden' para no crear barras molestas */
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .tarjeta:hover {
-    background-color: rgb(195, 180, 173); /* El nuevo color de fondo al pasar el ratón */
-    cursor: pointer;                      /* Cambia el cursor a una mano */
+    background-color: rgb(195, 180, 173);
+    cursor: pointer;
 }
 .estrellas {
     color: #f59e0b;                        /* Color dorado/amarillo para las estrellas */
